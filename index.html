@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>واشر سرسیلندر پارس | کیفیت اورجینال</title>
+<!-- فونت ها و آیکون ها -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg-dark: #111111;
+    --bg-darker: #0a0a0a;
+    --primary-red: #dc2626;
+    --primary-red-hover: #b91c1c;
+    --text-white: #ffffff;
+    --text-gray: #a3a3a3;
+    --card-bg: #1a1a1a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', sans-serif; }
+  body { background: #f9f9f9; color: #333; line-height: 1.8; font-size: 16px; }
+  a { text-decoration: none; color: inherit; }
+
+  /* ================= هدر بالایی ================= */
+  .top-header {
+    background: var(--bg-dark);
+    color: var(--text-white);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #222;
+  }
+  
+  /* لوگو */
+  .logo-area { display: flex; align-items: center; gap: 15px; }
+  .logo-icon { font-size: 40px; color: var(--text-white); position: relative; }
+  .logo-icon::after {
+    content: '\f013'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+    position: absolute; top: -5px; left: -10px; font-size: 20px; color: var(--primary-red);
+  }
+  .logo-text h1 { font-size: 22px; font-weight: 900; line-height: 1.2; }
+  .logo-text span { font-size: 12px; color: var(--text-gray); font-weight: 300; }
+
+  /* نوار جستجو و تماس */
+  .header-middle { display: flex; align-items: center; gap: 20px; flex: 1; justify-content: center; }
+  .search-box {
+    background: #222; border-radius: 5px; padding: 10px 15px;
+    display: flex; align-items: center; width: 100%; max-width: 400px;
+  }
+  .search-box input { background: none; border: none; color: white; outline: none; width: 100%; font-family: inherit; }
+  .search-box i { color: var(--text-gray); margin-right: 10px; }
+  .phone-number { display: flex; align-items: center; gap: 10px; color: white; font-weight: bold; font-size: 18px; white-space: nowrap; }
+  .phone-number i { color: var(--primary-red); font-size: 22px; }
+
+  /* دکمه ها */
+  .header-actions { display: flex; gap: 15px; }
+  .btn-header {
+    padding: 8px 20px; border-radius: 5px; font-size: 14px; font-weight: bold;
+    display: flex; align-items: center; gap: 8px; cursor: pointer; transition: 0.3s;
+  }
+  .btn-outline { border: 1px solid #444; color: white; background: transparent; }
+  .btn-outline:hover { border-color: var(--primary-red); background: rgba(220,38,38,0.1); }
+  .btn-red { background: var(--primary-red); color: white; border: none; }
+  .btn-red:hover { background: var(--primary-red-hover); }
+
+  /* ================= منوی اصلی ================= */
+  .main-nav {
+    background: var(--bg-darker);
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid var(--primary-red);
+  }
+  .main-nav ul { list-style: none; display: flex; }
+  .main-nav li a {
+    display: block; color: var(--text-gray); padding: 18px 25px;
+    font-weight: 700; font-size: 16px; transition: 0.3s;
+  }
+  .main-nav li a:hover, .main-nav li a.active {
+    color: white; background: var(--primary-red);
+  }
+
+  /* ================= هیرو (بنر اصلی) ================= */
+  .hero {
+    /* عکس پس زمینه موتور تیره */
+    background: linear-gradient(to left, rgba(10,10,10,0.8) 40%, rgba(10,10,10,0.95)), url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=1920&auto=format&fit=crop') center/cover;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* افکت خطوط قرمز شیب‌دار مثل عکس */
+  .hero::before {
+    content: ''; position: absolute; bottom: 0; right: 0; width: 100%; height: 50%;
+    background: linear-gradient(135deg, transparent 20%, rgba(220,38,38,0.1) 20%, rgba(220,38,38,0.3) 100%);
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    pointer-events: none;
+  }
+
+  .hero-content { color: white; max-width: 600px; position: relative; z-index: 2; }
+  .hero-content h2 { font-size: 48px; font-weight: 900; line-height: 1.3; margin-bottom: 20px; }
+  .hero-content h2 span { color: var(--primary-red); display: block; }
+  .hero-content p { font-size: 18px; color: #ddd; margin-bottom: 30px; }
+  .hero-btn {
+    background: var(--primary-red); color: white; padding: 12px 30px; border-radius: 5px;
+    font-weight: bold; font-size: 16px; display: inline-flex; align-items: center; gap: 10px;
+    transition: 0.3s;
+  }
+  .hero-btn:hover { background: var(--primary-red-hover); transform: translateX(-5px); }
+
+  /* ================= ویژگی‌ها (نوار مشکی زیر هیرو) ================= */
+  .features-bar {
+    background: #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 5%;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #222;
+  }
+  .feature-item {
+    display: flex; align-items: center; gap: 15px; color: white; margin: 10px 0;
+  }
+  .feature-item i { font-size: 35px; color: var(--text-gray); }
+  .feature-item h4 { font-size: 16px; font-weight: bold; margin-bottom: 2px; }
+  .feature-item p { font-size: 12px; color: var(--text-gray); }
+
+  /* ================= محصولات ================= */
+  .products-section { padding: 80px 5%; background: #f4f4f4; }
+  .section-header {
+    text-align: center; margin-bottom: 50px; position: relative;
+  }
+  .section-header h2 { font-size: 32px; font-weight: 900; color: #111; }
+  .section-header::before, .section-header::after {
+    content: ''; position: absolute; top: 50%; width: 15%; height: 2px; background: #ddd;
+  }
+  .section-header::before { right: 15%; }
+  .section-header::after { left: 15%; }
+
+  .products-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;
+  }
+  .product-card {
+    background: white; border-radius: 10px; overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s;
+  }
+  .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+  .product-img {
+    width: 100%; height: 220px; object-fit: cover; background: #eee;
+    padding: 20px;
+  }
+  .product-info { padding: 20px; text-align: center; border-top: 1px solid #eee; }
+  .product-info h3 { font-size: 18px; font-weight: bold; margin-bottom: 10px; color: #111; }
+  .product-info .price { color: var(--primary-red); font-weight: bold; font-size: 16px; margin-bottom: 15px; display: block; }
+  .product-info .btn-buy {
+    display: inline-block; width: 100%; padding: 10px; border-radius: 5px;
+    background: #111; color: white; font-weight: bold; transition: 0.3s;
+  }
+  .product-info .btn-buy:hover { background: var(--primary-red); }
+
+  /* ================= فوتر ================= */
+  footer { background: var(--bg-dark); color: var(--text-gray); text-align: center; padding: 40px 20px; border-top: 3px solid var(--primary-red); }
+  footer strong { color: white; }
+  .social-icons { margin-top: 20px; display: flex; justify-content: center; gap: 15px; }
+  .social-icons a { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #222; border-radius: 50%; color: white; transition: 0.3s; }
+  .social-icons a:hover { background: var(--primary-red); }
+
+  @media (max-width: 900px) {
+    .top-header { flex-direction: column; gap: 15px; }
+    .header-middle { width: 100%; flex-direction: column; }
+    .search-box { max-width: 100%; }
+    .main-nav ul { flex-wrap: wrap; justify-content: center; }
+    .hero { height: auto; padding: 80px 5%; }
+    .hero-content h2 { font-size: 34px; }
+    .features-bar { flex-direction: column; align-items: flex-start; }
+    .section-header::before, .section-header::after { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- هدر بالایی -->
+<div class="top-header">
+  <div class="logo-area">
+    <div class="logo-icon"><i class="fa-solid fa-gear fa-spin" style="animation-duration: 8s;"></i></div>
+    <div class="logo-text">
+      <h1>فرانس واشر</h1>
+      <span>کیفیت، دوام، اعتماد</span>
+    </div>
+  </div>
+
+  <div class="header-middle">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="جستجو در محصولات...">
+    </div>
+    <div class="phone-number">
+      <i class="fa-solid fa-phone-volume"></i>
+      <span>۰۹۱۴۴۶۲۷۰۵۹</span>
+    </div>
+  </div>
+
+  <div class="header-actions">
+    <button class="btn-header btn-outline"><i class="fa-regular fa-user"></i> ورود / ثبت نام</button>
+    <button class="btn-header btn-red"><i class="fa-solid fa-cart-shopping"></i> سبد خرید</button>
+  </div>
+</div>
+
+<!-- منوی اصلی -->
+<div class="main-nav">
+  <ul>
+    <li><a href="#" class="active">صفحه اصلی</a></li>
+    <li><a href="#products">محصولات</a></li>
+    <li><a href="#about">درباره ما</a></li>
+    <li><a href="#contact">تماس با ما</a></li>
+  </ul>
+</div>
+
+<!-- هیرو (بنر بزرگ) -->
+<div class="hero">
+  <div class="hero-content">
+    <h2>واشر سرسیلندر <span>با بالاترین کیفیت</span></h2>
+    <p>عملکرد بهتر موتور، عمر طولانی‌تر خودرو. تضمین اصالت و مقاومت در برابر حرارت و فشار بالا.</p>
+    <a href="#products" class="hero-btn">مشاهده محصولات <i class="fa-solid fa-arrow-left"></i></a>
+  </div>
+</div>
+
+<!-- ویژگی‌ها -->
+<div class="features-bar">
+  <div class="feature-item">
+    <i class="fa-solid fa-headset"></i>
+    <div>
+      <h4>پشتیبانی حرفه‌ای</h4>
+      <p>پاسخگویی سریع و مطمئن</p>
+    </div>
+  </div>
+  <div class="feature-item">
+    <i class="fa-solid fa-truck-fast"></i>
+    <div>
+      <h4>ارسال سریع</h4>
+      <p>به سراسر کشور</p>
+    </div>
+  </div>
+  <div class="feature-item">
+    <i class="fa-solid fa-gears"></i>
+    <div>
+      <h4>دوام و ماندگاری بالا</h4>
+      <p>مقاومت در برابر حرارت و فشار</p>
+    </div>
+  </div>
+  <div class="feature-item">
+    <i class="fa-solid fa-shield-halved"></i>
+    <div>
+      <h4>تضمین کیفیت</h4>
+      <p>تولید مطابق استاندارد جهانی</p>
+    </div>
+  </div>
+</div>
+
+<!-- محصولات -->
+<div class="products-section" id="products">
+  <div class="section-header">
+    <h2>محصولات ما</h2>
+  </div>
+  
+  <div class="products-grid">
+    <!-- محصول ۱ -->
+    <div class="product-card">
+      <img src="washer-1.jpg" alt="واشر سرسیلندر" class="product-img">
+      <div class="product-info">
+        <h3>واشر سرسیلندر مدل A</h3>
+        <span class="price">استعلام قیمت</span>
+        <a href="https://wa.me/989144627059" class="btn-buy" target="_blank">ثبت سفارش (واتساپ)</a>
+      </div>
+    </div>
+
+    <!-- محصول ۲ -->
+    <div class="product-card">
+      <img src="washer-2.jpg" alt="واشر سرسیلندر" class="product-img">
+      <div class="product-info">
+        <h3>واشر سرسیلندر مدل B</h3>
+        <span class="price">استعلام قیمت</span>
+        <a href="https://wa.me/989144627059" class="btn-buy" target="_blank">ثبت سفارش (واتساپ)</a>
+      </div>
+    </div>
+
+    <!-- محصول ۳ -->
+    <div class="product-card">
+      <img src="washer-3.jpg" alt="واشر سرسیلندر" class="product-img">
+      <div class="product-info">
+        <h3>واشر سرسیلندر مدل C</h3>
+        <span class="price">استعلام قیمت</span>
+        <a href="https://wa.me/989144627059" class="btn-buy" target="_blank">ثبت سفارش (واتساپ)</a>
+      </div>
+    </div>
+
+    <!-- محصول ۴ -->
+
+<div class="product-card">
+      <img src="washer-4.jpg" alt="واشر سرسیلندر" class="product-img">
+      <div class="product-info">
+        <h3>واشر سرسیلندر مدل D</h3>
+        <span class="price">استعلام قیمت</span>
+        <a href="https://wa.me/989144627059" class="btn-buy" target="_blank">ثبت سفارش (واتساپ)</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- فوتر -->
+<footer id="contact">
+  <p>© ۱۴۰۴ تمامی حقوق برای <strong>فرانس واشر</strong> محفوظ است.</p>
+  <p style="margin-top: 10px;">آدرس: تبریز-... | تلفن: ۰۹۱۴۴۶۲۷۰۵۹</p>
+  
+  <div class="social-icons">
+    <a href="https://wa.me/989144627059" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://instagram.com/washerorginal" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="tel:09144627059"><i class="fa-solid fa-phone"></i></a>
+  </div>
+</footer>
+
+</body>
+</html>
+
